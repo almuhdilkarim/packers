@@ -1,0 +1,19 @@
+{{- $data_vers := "" -}}
+{{- $vers_late := "" -}}
+{{- $vers_pack := "" -}}
+
+<!-- parsing repo data -->
+{{- with resources.Get "api/vers.json" -}}
+
+    {{- $data_vers = . | transform.Unmarshal -}}
+
+    <!-- repo name -->
+    {{- $vers_late = $data_vers.tag_name -}}
+
+    {{- $vers_pack = $data_vers.tarball_url -}}
+
+{{- end -}}
+
+{{- .Store.Set "vers_late" $vers_late -}}
+{{- .Store.Set "vers_pack" $vers_pack -}}
+

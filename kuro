@@ -1,6 +1,10 @@
 #!/bin/bash
 
 
-if [[ $1 == "-d" ]];then
+if [[ $1 == "-devel" ]];then
+    source aux/dumy
+fi
+
+if [[ $1 == "-build" ]];then
     source aux/devel
 fi

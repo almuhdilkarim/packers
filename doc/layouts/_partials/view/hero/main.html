@@ -7,7 +7,7 @@
 
     <div class="info-bar">
         <div class="left-bar">
-            <a href="#" class="download-btn" aria-label="Download Package">
+            <a href="{{ .Store.Get "vers_pack" }}" target="_blank" class="download-btn" aria-label="Download Package">
                 {{ partial "icon" "download" }} Download
             </a>
             <div class="icons">
@@ -22,15 +22,15 @@
         <div class="right-bar">
             <div class="info">
                 <div class="author">
-                    <img src="img/author.webp" class="avatar" alt="author" />
+                    <img src="{{ .Store.Get "user_avat" }}" class="avatar" alt="author" />
                     <div>
                         <p class="label">Developer</p>
-                        <p>24 Entertainment</p>
+                        <p>{{ .Store.Get "user_name" }}</p>
                     </div>
                 </div>
                 <div class="version">
                     <p class="label">Latest Version</p>
-                    <p>1.0.528936</p>
+                    <p>{{ .Store.Get "vers_late" }}</p>
                 </div>
             </div>
         </div>
