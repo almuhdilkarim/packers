@@ -7,11 +7,11 @@
 <!-- toc mainbox -->
 {{- define "_partials/inline/sides/tocbox.html" }}
 
-	<section class="sidebar-section tocs">
-		<h2 class="section-title">
+	<section class="tocs">
+		<h2 class="sidebar-title">
 			<span>{{ partial "icon" "package" }}</span> Contents
 		</h2>
-		<ul class="section-block">
+		<ul class="sidebar-block">
 			{{- with .Fragments -}}{{- partial "inline/sides/level1.html" . -}}{{- end -}}
 		</ul>
 	</section>

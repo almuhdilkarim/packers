@@ -3,15 +3,10 @@
     width: clamp(250px, 25vw, 300px);
     flex-shrink: 0;
     order: 2;
-}
-
-.sidebar-section { 
     border-radius: 12px;
     padding: clamp(16px, 2vw, 20px);
     margin-bottom: clamp(16px, 2vw, 20px);
 }
-
-
 
 /* Optional: Add spacing between the number and the text */
 h1:before, h2:before, h3:before, h4:before {
@@ -20,7 +15,7 @@ h1:before, h2:before, h3:before, h4:before {
 
 
 /* ========== SIDEBAR TITLE ========== */
-.section-title {
+.sidebar-title {
     gap: 15px;
     display: flex;
     align-items: center;
@@ -33,11 +28,11 @@ h1:before, h2:before, h3:before, h4:before {
     position: relative;
 }
 
-.section-title span{
+.sidebar-title span{
     padding-right: 20px;
 }
 
-.section-title::after {
+.sidebar-title::after {
     content: '';
     position: absolute;
     left: 37px;
@@ -47,7 +42,7 @@ h1:before, h2:before, h3:before, h4:before {
     background-color: #2D3444;
 }
 
-.section-title svg {
+.sidebar-title svg {
     width: 1.85;
     height: 1.85rem;
     color: #ff4500;
