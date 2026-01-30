@@ -8,9 +8,9 @@
 	<div class="overlay">
 		<article class="content infopage">
 			<div class="header">
-				<h1 class="heading">About {{ .Parent.Parent.Title }}</h1>
+				<h1 class="heading">{{ .Title }}</h1>
 			</div>
-			<div class="pages"> {{ .Content }} </div>
+			<div class="pages">{{ .Content }}</div>
 		</article>
 		<asside class="sidebar">
 			{{- partial "view/sides/packdata.html" . -}}
