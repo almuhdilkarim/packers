@@ -10,8 +10,6 @@
     {{- $styles_head := resources.Get $styles_head.src | resources.ExecuteAsTemplate $styles_head.dest . | toCSS | minify -}}
     <link type="text/css" rel="stylesheet" href="{{ $styles_head.RelPermalink }}" />
     
-
-
     {{- partial "view/head/aset.html" . -}}
     {{- partial "view/meta/main.html" . -}}
 </head>
@@ -23,7 +21,7 @@
         <div class="wrap">
             {{- partial "view/hero/main.html" . -}}
             {{- partial "view/pane/main.html" . -}}
-            {{- block "main" . }}{{-  end  -}}
+            {{- block "main" . }}{{- end -}}
         </div>
     </main>
     <footer>
