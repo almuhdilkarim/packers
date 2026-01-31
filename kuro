@@ -2,6 +2,7 @@
 
 
 source "aux/data"
+source "aux/wiki"
 
 if [[ $1 == "-devel" ]];then
     source aux/devs
@@ -14,4 +15,8 @@ fi
 
 if [[ $1 == "-apigen" ]];then
     packers_apigen
+fi
+
+if [[ $1 == "-wikigen" ]];then
+    packers_wikigen
 fi

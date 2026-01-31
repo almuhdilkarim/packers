@@ -30,12 +30,6 @@
     <loc>http://localhost:1313/docs/</loc>
     <lastmod>2023-02-15T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/post-1/</loc>
-    <lastmod>2023-02-15T17:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/post-2/</loc>
-    <lastmod>2023-02-15T17:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/post-2/</loc>
     <lastmod>2023-02-15T10:00:00-07:00</lastmod>
   </url><url>
@@ -70,6 +64,8 @@
                 href="http://localhost:1313/"
                 />
   </url><url>
+    <loc>http://localhost:1313/docs/acknowledgement/</loc>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -81,5 +77,9 @@
                 hreflang="en"
                 href="http://localhost:1313/categories/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/docs/home/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/installation/</loc>
   </url>
 </urlset>
