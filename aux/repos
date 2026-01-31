@@ -1,9 +1,0 @@
-#!/bin/bash
-
-
-#curl -H "Authorization: token YOUR_PERSONAL_ACCESS_TOKEN" https://api.github.com/user/repos
-
-mkdir -p ../doc/assets/api &&
-curl https://api.github.com/repos/almuhdilkarim/knocks > ../doc/assets/api/repo.json
-curl https://api.github.com/users/almuhdilkarim > ../doc/assets/api/user.json
-curl https://api.github.com/repos/rozard-webgen/packers/releases/latest > ../doc/assets/api/vers.json

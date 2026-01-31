@@ -1,18 +1,22 @@
- <!-- CONTRIBUTORS - Show on all pages -->
-                <div class="contributors-section" data-show="0,1,2,3,4,5,6">
-                    <h4 class="sidebar-title">
-                        <i data-feather="users"></i>
-                        Contributors
-                    </h4>
-                    <div class="people-list">
-                        <div class="person-item">
-                            <img src="img/kontributor1.webp" class="person-avatar" alt="Contributor">
-                        </div>
-                        <div class="person-item">
-                            <img src="img/kontributor2.webp" class="person-avatar" alt="Contributor">
-                        </div>
-                        <div class="person-item">
-                            <img src="img/kontributor3.webp" class="person-avatar" alt="Contributor">
-                        </div>
-                    </div>
+{{- $github_data_cont := "" -}}
+
+<!-- CONTRIBUTORS  -->
+<div class="maintainers-section">
+    <h4 class="sidebar-title">
+        {{- partial "icon" "users" -}} Developer
+    </h4>
+     <div class="people-list">
+        {{- with resources.Get "api/github/cont.json" -}}
+            {{- $github_data_cont = . | transform.Unmarshal -}}
+            {{- range $github_data_cont -}}
+            <div class="person-item">
+                <img src="{{ .avatar_url }}" class="person-avatar" alt="Maintainer">
+                <div class="person-info">
+                    <div class="person-name">@{{ .login }}</div>
+                    <a href="{{ .html_url }}" target="_blank" class="person-role">Follow</a>
                 </div>
+            </div>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>

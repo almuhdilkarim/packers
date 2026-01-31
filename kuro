@@ -1,10 +1,17 @@
 #!/bin/bash
 
 
+source "aux/data"
+
 if [[ $1 == "-devel" ]];then
-    source aux/dumy
+    source aux/devs
 fi
 
 if [[ $1 == "-build" ]];then
-    source aux/devel
+    source aux/pubs
+fi
+
+
+if [[ $1 == "-apigen" ]];then
+    packers_apigen
 fi

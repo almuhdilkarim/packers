@@ -1,6 +1,7 @@
 h1 {
     font-weight: 600; 
     line-height: 1.3; 
+    text-transform: capitalize;
     font-size: unquote("clamp(1rem, 1.5vw + 1em, 1.5em)");  
 }
 
