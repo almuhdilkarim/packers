@@ -2,9 +2,13 @@
 
 
 function kurosh_webpub() {
-    cd $(pwd)/doc && hugo
+    
+    local path="$(pwd)/pub"
+    test -d $path && rm -fr $path
+    cd $(pwd)/doc && hugo --destination "$path"
+    unset $path
 }
 
 function kurosh_webdev() {
-    cd $(pwd)/doc && hugo server --config ../con/site.yaml --disableFastRender
+    cd "$(pwd)/doc" && hugo server --config ../con/site.yaml --disableFastRender
 }
