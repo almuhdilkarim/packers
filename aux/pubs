@@ -1,18 +1,18 @@
 #!/bin/env bash
 
-function kurosh_webcon() {
+function packer_webcon() {
 
-    source $(pwd)/con/app.conf
+    source $kurosh_path/con/app.conf
 
-    echo "title: $title"        >  $(pwd)/con/site.yaml
-    echo "baseURL: $hosts"      >> $(pwd)/con/site.yaml
-    echo "languageCode: $langs" >> $(pwd)/con/site.yaml
+    echo "title: $title"        >  $kurosh_path/con/site.yaml
+    echo "baseURL: $hosts"      >> $kurosh_path/con/site.yaml
+    echo "languageCode: $langs" >> $kurosh_path/con/site.yaml
 }
 
 
-function kurosh_webpub() {
+function packer_webpub() {
     
-    kurosh_webcon
+    packer_webcon
 
     local path="$(pwd)/pub"
     test -d $path && rm -fr $path
@@ -20,9 +20,10 @@ function kurosh_webpub() {
     unset $path
 }
 
-function kurosh_webdev() {
 
-    kurosh_webcon
+function packer_webdev() {
+
+    packer_webcon
 
     cd "$(pwd)/doc" && 
     hugo server --config $kurosh_path/con/site.yaml --disableFastRender &&

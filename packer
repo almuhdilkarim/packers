@@ -5,17 +5,17 @@ source "aux/load"
 
 
 if [[ $1 == "-devel" ]];then
-    kurosh_webdev
+    packer_webdev
 fi
 
 if [[ $1 == "-build" ]];then
-    kurosh_webpub    
+    packer_webpub    
 fi
 
 if [[ $1 == "-apigen" ]];then
-    packers_apigen
+    packer_apigen
 fi
 
 if [[ $1 == "-wikigen" ]];then
-    packers_wikigen
+    packer_wikigen
 fi

@@ -28,7 +28,7 @@ function packers_apigen_gitlab() {
 }
 
 
-function packers_apigen() {
+function packer_apigen() {
     packers_apigen_github
     packers_apigen_gitlab
 }

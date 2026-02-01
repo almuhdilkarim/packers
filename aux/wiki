@@ -35,7 +35,7 @@ function packers_wikigen_finish() {
 }
 
 
-function packers_wikigen() {
+function packer_wikigen() {
     packers_wikigen_takers &&
     packers_wikigen_prepar &&
     packers_wikigen_deploy &&
