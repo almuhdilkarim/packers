@@ -1,16 +1,16 @@
 <!-- toc initload -->
-{{- partial "inline/sides/listterm_blogbox.html" . -}}
+{{- partial "inline/sides/pageterm_blogboxs.html" . -}}
 
 
 <!-- toc mainbox -->
-{{- define "_partials/inline/sides/listterm_blogbox.html" -}}
+{{- define "_partials/inline/sides/pageterm_blogboxs.html" -}}
 
-	<section class="tocs sections">
+	<section class="pageterm sections">
 		<h2 class="subtitle">
-			<span>{{- partial "icon" "package" -}}</span> Categories
+			<span>{{- partial "icon" "folder" -}}</span> Categories
 		</h2>
-		<ul class="sidebar-block">
-			{{- partial "inline/sides/listterm_blogitem.html" . -}}
+		<ul class="subsider">
+			{{- partial "inline/sides/pageterm_blogitem.html" . -}}
 		</ul>
 	</section>
 
@@ -18,17 +18,17 @@
 
 
 <!-- toc level 1 -->
-{{- define "_partials/inline/sides/listterm_blogitem.html" }}
+{{- define "_partials/inline/sides/pageterm_blogitem.html" }}
 
 	{{- range .Site.Taxonomies.tags.Alphabetical -}} 
+
 		<li class="item open">
-			<div class="parent">
-				<span class="icons">{{- partial "icon" "plus-circle" -}}</span>
-				<a class="heading" href="{{ .Page.RelPermalink }}">
-					{{- .Page.Title | htmlUnescape -}}
-				</a>
-			</div>
+			<span class="icons">{{- partial "icon" "arrow-right-circle" -}}</span>
+			<a class="infers" href="{{ .Page.RelPermalink }}">
+				{{- .Page.Title | htmlUnescape -}}
+			</a>
         </li>
+
 	{{- end -}}
 
 {{- end -}} 

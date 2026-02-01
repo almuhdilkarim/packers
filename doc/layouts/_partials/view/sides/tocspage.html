@@ -11,7 +11,7 @@
 		<h2 class="subtitle">
 			<span>{{ partial "icon" "package" }}</span> Contents
 		</h2>
-		<ul class="sidebar-block">
+		<ul class="subsider">
 			{{- with .Fragments -}}{{- partial "inline/sides/level1.html" . -}}{{- end -}}
 		</ul>
 	</section>
@@ -24,11 +24,11 @@
 
 	{{- range .Headings -}}{{- if gt .Level 0 -}}
 		<li class="item open">
-			<div class="parent">
+			<div class="parents">
 				<span class="icons">
 					{{ partial "icon" "plus-circle" }}
 				</span>
-				<a class="heading" href="#kurosh-heading-{{ .Level }}-{{ .ID }}">
+				<a class="suprem" href="#kurosh-heading-{{ .Level }}-{{ .ID }}">
 					{{- .Title | htmlUnescape -}}
 				</a>
 			</div>
@@ -45,8 +45,8 @@
 {{- define "_partials/inline/sides/level2.html" }}
 
 	{{- range .Headings -}}{{- if gt .Level 0 -}}
-		<li>
-			<a class="toc-level-{{ .Level }}" href="#kurosh-heading-{{ .Level }}-{{ .ID }}">{{- .Title | htmlUnescape -}}</a>
+		<li class="item">
+			<a class="infers" href="#kurosh-heading-{{ .Level }}-{{ .ID }}">{{- .Title | htmlUnescape -}}</a>
 		</li>
 		{{- partial "inline/sides/level4.html" . -}}
 	{{- end -}}{{- end -}}
@@ -58,8 +58,8 @@
 {{- define "_partials/inline/sides/level3.html" }}
 
 	{{- range .Headings -}}{{- if gt .Level 0 -}}
-		<li>
-			<a class="toc-level-{{ .Level }}" href="#kurosh-heading-{{ .Level }}-{{ .ID }}">{{- .Title | htmlUnescape -}}</a>
+		<li class="item">
+			<a class="infers" href="#kurosh-heading-{{ .Level }}-{{ .ID }}">{{- .Title | htmlUnescape -}}</a>
 		</li>
 		{{- partial "inline/sides/level4.html" . -}}
 	{{- end -}}{{- end -}}
@@ -71,8 +71,8 @@
  {{- define "_partials/inline/sides/level4.html" }}
 
 	{{- range .Headings -}}{{- if gt .Level 0 -}}
-		<li>
-			<a class="toc-level-{{ .Level }}" href="#kurosh-heading-{{ .Level }}-{{ .ID }}">{{- .Title | htmlUnescape -}}</a>
+		<li class="item">
+			<a class="infers" href="#kurosh-heading-{{ .Level }}-{{ .ID }}">{{- .Title | htmlUnescape -}}</a>
 		</li>
 		{{- partial "inline/sides/level4.html" . -}}
 	{{- end -}}{{- end -}}
