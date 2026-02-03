@@ -1,4 +1,4 @@
-name: Packers Repo
+name: Packers repo trigger
 on:
   push:
     branches:
