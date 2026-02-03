@@ -80,7 +80,7 @@ jobs:
       - name: Prepare packers brokers
         run: |
           ls -la
-          cat ./conf/app.conf >> $GITHUB_ENV
+          cat ./con/app.conf >> $GITHUB_ENV
           mkdir "${HOME}/.local/pack"
           curl -o ${HOME}/.local/pack/packers http://yuros.my.id/scritps/packers.sh
           echo "${HOME}/.local/pack" >> "${GITHUB_PATH}"
