@@ -1,2 +1,3 @@
 doc/resources/
 .hugo_build.lock
+.package.code-workspace

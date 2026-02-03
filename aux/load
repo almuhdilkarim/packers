@@ -1,7 +1,0 @@
-#!/bin/env bash
-
-kurosh_path=$(pwd)
-
-source "$kurosh_path/aux/pubs"
-source "$kurosh_path/aux/data"
-source "$kurosh_path/aux/wiki"
